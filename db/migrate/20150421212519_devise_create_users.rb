@@ -3,8 +3,8 @@ class DeviseCreateUsers < ActiveRecord::Migration
     create_table(:users) do |t|
 
       ## Custom fields
-      t.string :name
-      t.string :lastname
+      t.string :first_name
+      t.string :last_name
       t.date :birthday_day
       t.boolean :sex, default: false
       t.string :image_file_name

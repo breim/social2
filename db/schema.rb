@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(version: 20150421223810) do
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "lastname"
+    t.string   "first_name"
+    t.string   "last_name"
     t.date     "birthday_day"
     t.boolean  "sex",                    default: false
     t.string   "image_file_name"
