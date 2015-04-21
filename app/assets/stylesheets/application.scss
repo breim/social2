@@ -3,3 +3,9 @@
 @import "rails_bootstrap_forms";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "navbar_user";
+
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
