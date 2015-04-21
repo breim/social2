@@ -17,9 +17,10 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
+  username: <%= ENV['SOCIAL_DATABASE_USER'] %>
+  password: <%= ENV['SOCIAL_DATABASE_PASSWORD'] %>
+  host: localhost
 
 development:
   <<: *default
@@ -81,5 +82,5 @@ test:
 production:
   <<: *default
   database: social_production
-  username: social
+  username: <%= ENV['SOCIAL_DATABASE_USER'] %>
   password: <%= ENV['SOCIAL_DATABASE_PASSWORD'] %>
