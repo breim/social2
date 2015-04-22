@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 20150421223810) do
   create_table "users", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.date     "birthday_day"
+    t.date     "birth_day"
     t.boolean  "sex",                    default: false
     t.string   "image_file_name"
     t.string   "image_content_type"

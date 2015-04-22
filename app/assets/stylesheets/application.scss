@@ -6,6 +6,17 @@
 @import "navbar_user";
 
 body {
-  min-height: 2000px;
   padding-top: 70px;
+  background-color:#FAFAFA;
+  text-rendering: optimizelegibility;
+}
+
+label.required:after {
+  content:" *";
+  color: #ffab91;
+}
+
+.map{
+	max-width: 400px;
+	color: blue;
 }

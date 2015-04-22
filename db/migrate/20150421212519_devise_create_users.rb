@@ -5,7 +5,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
       ## Custom fields
       t.string :first_name
       t.string :last_name
-      t.date :birthday_day
+      t.date :birth_day
       t.boolean :sex, default: false
       t.string :image_file_name
       t.string :image_content_type

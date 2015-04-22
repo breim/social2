@@ -4,15 +4,22 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
-  # Friendly id Gem
+  # Validations
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :password_confirmation, presence: true
+  validates :birth_day, presence: true
+
+  # FriendlyID Gem
   extend FriendlyId
   friendly_id :slug_candidates, use: :slugged
+
   def slug_candidates
-    [
-      :name,
-      [:name, :lastname],
-      [:name, :lastname, :birthday_day]
+    [:first_name,
+      [:first_name, :last_name],
+      [:last_name, :first_name]
     ]
   end
-  
+  # end
+
 end
