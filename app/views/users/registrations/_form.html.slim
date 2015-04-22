@@ -1,0 +1,15 @@
+h2 Make account 
+= bootstrap_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+	= devise_error_messages! 
+	.row
+		.col-sm-6
+			= f.text_field :first_name, required: true
+		.col-sm-6
+			= f.text_field :last_name, required: true
+	= f.email_field :email, required: true
+	= f.password_field :password, required: true
+	= f.password_field :password_confirmation, required: true
+	= f.date_field :birth_day, required: true
+	= f.radio_button :sex, true, label: 'Man'
+	= f.radio_button :sex, false, label: 'Woman'
+	= f.submit "Sign up", class: 'btn btn-primary btn-lg pull-right'
