@@ -10,6 +10,6 @@ h2 Make account
 	= f.password_field :password, required: true
 	= f.password_field :password_confirmation, required: true
 	= f.date_field :birth_day, required: true
-	= f.radio_button :sex, true, label: 'Man'
-	= f.radio_button :sex, false, label: 'Woman'
+	= f.radio_button :sex, false, label: 'Man'
+	= f.radio_button :sex, true, label: 'Woman'
 	= f.submit "Sign up", class: 'btn btn-primary btn-lg pull-right'

@@ -11,10 +11,10 @@ helper_method :resource, :resource_name, :devise_mapping
 	  before_filter :configure_devise_params, if: :devise_controller?
 		def configure_devise_params
 			devise_parameter_sanitizer.for(:sign_up) do |u|
-				u.permit(:first_name,:last_name, :birth_day,:email,:password,:password_confirmation)
+				u.permit(:first_name,:last_name, :birth_day, :sex,:email,:password,:password_confirmation)
 			end
 			devise_parameter_sanitizer.for(:account_update) do |u|
-				u.permit(:first_name,:last_name, :birth_day,:email,:password,:image,:image_file_name, :image_content_type, :image_file_size)
+				u.permit(:first_name,:last_name, :birth_day, :sex,:email,:password,:image,:image_file_name, :image_content_type, :image_file_size)
 			end
 			devise_parameter_sanitizer.for(:sign_in) do |u|
 				u.permit(:email,:password)
